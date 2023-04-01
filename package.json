@@ -1,0 +1,26 @@
+{
+  "name": "disys_code_challenge",
+  "version": "1.0.0",
+  "description": "Code challenge for Cypress automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinchbr/disys_code_challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinchbr/disys_code_challenge/issues"
+  },
+  "homepage": "https://github.com/vinchbr/disys_code_challenge#readme",
+  "dependencies": {
+    "cypress": "^12.9.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
+  }
+}
