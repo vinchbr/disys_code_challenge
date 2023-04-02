@@ -3,7 +3,9 @@ This is a Cypress-based test suite to validate that the hours of operation for D
 
 ## Test Plan:
 
-* Open a direct link to www.google.com/?q=DISYS
+* Open a browser
+* Navigate to the Google homepage
+* Enter "DISYS" into the search bar and hit enter
 * Click on the "Hours" section on the DISYS Google My Business page
 * Validate that the hours displayed are 8:30AM to 5:00PM every weekday (Monday to Friday)
 * Validate that the hours displayed are closed on weekends (Saturday and Sunday)
