@@ -1,21 +1,22 @@
+import { googlePage } from "../pages/googlePage";
 import {
-  googleSearchResultsPage,
   hoursContainerLocator,
-} from "../pages/googleSearchResults.page";
+  searchResultsPage,
+} from "../pages/searchResultsPage";
 
 describe("DISYS Hours of Operation Validation", () => {
-  const DISYS_URL = "https://www.google.com/search?q=DISYS";
   const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   const WEEKENDS = ["Saturday", "Sunday"];
   const EXPECTED_OPEN_TIME = "8:30 AM";
   const EXPECTED_CLOSE_TIME = "5 PM";
 
   beforeEach(() => {
-    googleSearchResultsPage.open(DISYS_URL);
+    googlePage.search("DISYS");
   });
 
   // Validate that DISYS is open on weekdays from 8:30 AM to 5 PM
   it("should display correct hours for the business", () => {
+    searchResultsPage.expandHours();
     cy.get(hoursContainerLocator)
       .find("table tr")
       .each((tr) => {

@@ -11,13 +11,34 @@ This is a Cypress-based test suite to validate that the hours of operation for D
 ## Installation and Running Tests
 ### Clone the repository:
 
-```git clone https://github.com/vinchbr/disys_code_challenge.git```
+```bash
+git clone https://github.com/vinchbr/disys_code_challenge.git
+```
 ### Install the dependencies:
 
-```npm install```
+```bash
+npm install
+```
 
-#### Update the environment variables for the database connection in the cypress.config.js:
+### Update the environment variables for the database connection in the cypress.config.js:
+```makefile
+DB_HOST=localhost
+DB_USER=your-db-username
+DB_PASSWORD=your-db-password
+```
 
-### Run the tests:
+### Run the Cypress tests:
 
-```npm run test```
+```bash
+npm run test:chrome
+```
+
+Replace BROWSER_NAME with: electron, chrome, edge or firefox
+
+
+### Run the DB tests
+_Tests will fail_
+
+```bash
+npm run test:db
+```

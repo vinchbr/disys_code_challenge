@@ -4,7 +4,11 @@
   "description": "Code challenge for Cypress automation",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
+    "test:electron": "cypress run",
+    "test:chrome": "cypress run --broser chrome",
+    "test:edge": "cypress run --browser edge",
+    "test:firefox": "cypress run --browser firefox",
+    "test:db": "mocha --recursive",
     "cypress:open": "cypress open"
   },
   "repository": {
@@ -18,7 +22,9 @@
   },
   "homepage": "https://github.com/vinchbr/disys_code_challenge#readme",
   "dependencies": {
-    "cypress": "^12.9.0"
+    "cypress": "^12.9.0",
+    "mocha": "^10.2.0",
+    "pg": "^8.10.0"
   },
   "devDependencies": {
     "prettier": "^2.8.7"
